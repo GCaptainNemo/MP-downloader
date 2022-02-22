@@ -2,7 +2,7 @@
 
 ## 一、介绍
 
-因为项目原因需要下载`Materials Project`网站所有的CIF文件进行机器学习，`pymatgen`给出了如下示例，也就是说理论上遍历所有id就可以把网站所有CIF文件下载完成。
+因为项目原因需要下载[Materials Project](https://materialsproject.org/)网站所有的CIF文件进行机器学习，`pymatgen`给出了如下示例，也就是说理论上遍历所有id就可以把网站所有CIF文件下载完成。
 
 ```
 get_structure_by_material_id("mp-1000")
@@ -16,13 +16,13 @@ get_structure_by_material_id("mp-1000")
 
 ## 二、使用方法
 
-1. 获得所有id地pickle文件 `all_mp_id.pkl`
+1. 获得所有id，并保存在本地src/all_mp_id.pkl
 
 ```python
 python ./get_obj_id.py
 ```
 
-2. 遍历 `all_mp_id.pkl`文件，下载所有CIF文件
+2. 遍历src/all_mp_id.pkl文件，下载所有CIF文件
 
 ```
 python ./download.py
