@@ -16,9 +16,9 @@ if __name__ == '__main__':
     print(len(all_mp_id_lst))
     for i in range(6, len(all_mp_id_lst) // step + 1, step):
         requrest_lst = all_mp_id_lst[i * step: (i + 1) * step]
-        print(requrest_lst)
+        print(requrest_lst  )
         entries = mpr.query({"material_id": {"$in": requrest_lst}},
-                            ["material_id", "cif", "pretty_formula"])
+                            ["material_id", "cif", "pretty_formula"]) # pretty_formula->reduced formula, full_formula->full formula
         data = []
         data.extend(entries)
         print(len(data))

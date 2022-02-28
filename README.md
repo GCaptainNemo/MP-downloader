@@ -19,13 +19,13 @@ get_structure_by_material_id("mp-1000")
 1. 获得所有id，并保存在本地src/all_mp_id.pkl
 
 ```python
-python ./get_obj_id.py
+python ./get_mp_id.py
 ```
 
 2. 遍历src/all_mp_id.pkl文件，下载所有惯用晶胞(conventional_unit_cell)CIF文件
 
 ```
-python ./download.py
+python ./download_conventional_cell.py
 ```
 
 3. 下载所有单胞CIF文件（由于使用默认下载，下载速度远快于2）

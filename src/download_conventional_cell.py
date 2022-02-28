@@ -5,8 +5,6 @@ import numpy as np
 import pickle
 
 
-
-
 class CifDownload:
     def __init__(self):
         # self.mp_rest_obj = MPRester("pc0rARlba5Ae3SArM09")
