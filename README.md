@@ -31,7 +31,7 @@ python ./download_conventional_cell.py
 3. 下载所有单胞CIF文件（由于使用默认下载，下载速度远快于2）
 
 ```
-python ./download_unit_Cell.py
+python ./download_unit_cell.py
 ```
 
 ## 三、参考资料
