@@ -34,8 +34,19 @@ python ./download_conventional_cell.py
 python ./download_unit_cell.py
 ```
 
-## 三、参考资料
+
+
+## 三、补充下载方式
+
+除了利用pymatgen通过Materials Project API下载MP网站材料数据之外，还有许多数据集属于文章发布后被Materials Project收录，比如文献[3]发布的[电子输运性质数据集](https://contribs.materialsproject.org/projects/carrier_transport/)，这类数据集可以通过matminer或其它方式下载，见[Website](https://github.com/hackingmaterials/matminer/issues/606)。
+
+
+
+## 四、参考资料
 
 [1] [github-pymatgen](https://github.com/materialsproject/mapidoc)
 
 [2] [github-pymatgen-下载demo](https://github.com/materialsproject/mapidoc/blob/7f7ce08488b2e44fc758c903e9828b969a27d421/example_notebooks/Get%20all%20MP%20oxide%20CIFs.ipynb)
+
+[3] Ricci, F., Chen, W., Aydemir, U. *et al.* An *ab initio* electronic transport database for inorganic materials. *Sci Data* **4,** 170085 (2017). https://doi.org/10.1038/sdata.2017.85
+

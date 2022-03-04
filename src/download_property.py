@@ -59,6 +59,23 @@ def get_criterion_txt(criterion_lst, input_dir="../data/tetrahedron_124657_csm/"
     else:
         return entries
 
+def remove_repeat_cif(property_json="./query.json", remove_dir="../data/tetrahedron_126335_csm_remove_repeat/"):
+    """
+        use (material_id, pretty_formula) as identity to filter repeated cif file.
+    """
+    # identity_lst = [(_["pretty_formula"], _["spacegroup.symbol"])]
+    with open(property_json, 'r', encoding='utf8')as fp:
+        json_data = json.load(fp)
+    set_ = set()
+    for i, data in enumerate(json_data):
+        element = (data["pretty_formula"], data["spacegroup.symbol"])
+        if element not in set_:
+            set_.add(element)
+        else:
+            file_name = data["pretty_formula"] + "-" + data["material_id"] + ".cif"
+            file_address = remove_dir + file_name
+            os.remove(file_address)
+
 
 if __name__ == "__main__":
     criterion_lst = ["spacegroup.symbol", "band_gap", "material_id", "pretty_formula"]
